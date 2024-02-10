@@ -20,16 +20,18 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"ypd0210.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"ypd0210.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
+  <meta name="description" content="心有所向，无问东西">
+<meta property="og:type" content="website">
 <meta property="og:title" content="schedule">
 <meta property="og:url" content="https://ypd0210.github.io/schedule/index.html">
 <meta property="og:site_name" content="心念的Blog">
+<meta property="og:description" content="心有所向，无问东西">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-02-07T16:32:01.000Z">
-<meta property="article:modified_time" content="2024-02-07T16:32:01.350Z">
+<meta property="article:modified_time" content="2024-02-10T13:25:44.697Z">
 <meta property="article:author" content="心念">
 <meta name="twitter:card" content="summary">
 
@@ -45,7 +47,7 @@
     lang   : 'zh-CN'
   };
 </script>
-
+<link rel="stylesheet" type="text/css" href="/css/injector/main.css" /><link rel="preload" as="style" href="/css/injector/light.css" /><link rel="preload" as="style" href="/css/injector/dark.css" />
   <title>schedule | 心念的Blog
 </title>
   
@@ -101,11 +103,12 @@
       <h1 class="site-title">心念的Blog</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">从这里进入我的世界</p>
+      <p class="site-subtitle" itemprop="description">奔赴山海，保持热爱</p>
   </div>
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -145,11 +148,38 @@
     <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -191,7 +221,164 @@
       
       
       <div class="post-body">
-          
+          <div class="event-list">
+          </div>
+          <script data-pjax>
+(function() {
+  // Initialization
+  var calendar = {
+    orderBy     : 'startTime',
+    showLocation: false,
+    offsetMax   : 72,
+    offsetMin   : 4,
+    showDeleted : false,
+    singleEvents: true,
+    maxResults  : 250
+  };
+
+  // Read config form theme config file
+  Object.assign(calendar, {"calendar_id":"<required>","api_key":"<required>","orderBy":"startTime","offsetMax":24,"offsetMin":4,"showDeleted":false,"singleEvents":true,"maxResults":250});
+
+  var now = new Date();
+  var timeMax = new Date();
+  var timeMin = new Date();
+
+  timeMax.setHours(now.getHours() + calendar.offsetMax);
+  timeMin.setHours(now.getHours() - calendar.offsetMin);
+
+  // Build URL
+  const params = {
+    key         : calendar.api_key,
+    orderBy     : calendar.orderBy,
+    timeMax     : timeMax.toISOString(),
+    timeMin     : timeMin.toISOString(),
+    showDeleted : calendar.showDeleted,
+    singleEvents: calendar.singleEvents,
+    maxResults  : calendar.maxResults
+  };
+
+  var request_url = 'https://www.googleapis.com/calendar/v3/calendars/' + calendar.calendar_id + '/events?' + Object.entries(params).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+
+  fetchData();
+  var fetchDataTimer = setInterval(fetchData, 60000);
+  window.addEventListener('pjax:send', () => {
+    clearInterval(fetchDataTimer);
+  });
+
+  function fetchData() {
+    var eventList = document.querySelector('.event-list');
+    if (!eventList) return;
+
+    fetch(request_url).then(response => {
+      return response.json();
+    }).then(data => {
+      if (data.items.length === 0) {
+        eventList.innerHTML = '<hr>';
+        return;
+      }
+      // Clean the event list
+      eventList.innerHTML = '';
+      var prevEnd = 0; // used to decide where to insert an <hr>
+
+      data.items.forEach(event => {
+        // Parse data
+        var utc   = new Date().getTimezoneOffset() * 60000;
+        var start = event.start.dateTime = new Date(event.start.dateTime || (new Date(event.start.date).getTime() + utc));
+        var end   = event.end.dateTime = new Date(event.end.dateTime || (new Date(event.end.date).getTime() + utc));
+
+        tense = judgeTense(now, start, end); // 0:now 1:future -1:past
+
+        if (tense === 1 && prevEnd < now) {
+          eventList.innerHTML += '<hr>';
+        }
+
+        eventDOM = buildEventDOM(tense, event);
+        eventList.innerHTML += eventDOM;
+
+        prevEnd = end;
+      });
+    });
+  }
+
+  function getRelativeTime(current, previous) {
+    var msPerMinute = 60 * 1000;
+    var msPerHour = msPerMinute * 60;
+    var msPerDay = msPerHour * 24;
+    var msPerMonth = msPerDay * 30;
+    var msPerYear = msPerDay * 365;
+
+    var elapsed = current - previous;
+    var tense = elapsed > 0 ? 'ago' : 'later';
+
+    elapsed = Math.abs(elapsed);
+
+    if      ( elapsed < msPerHour  ) {
+      return Math.round(elapsed / msPerMinute) + ' minutes ' + tense;
+    }
+    else if ( elapsed < msPerDay   ) {
+      return Math.round(elapsed / msPerHour) + ' hours ' + tense;
+    }
+    else if ( elapsed < msPerMonth ) {
+      return 'about ' + Math.round(elapsed / msPerDay) + ' days ' + tense;
+    }
+    else if ( elapsed < msPerYear  ) {
+      return 'about ' + Math.round(elapsed / msPerMonth) + ' months ' + tense;
+    }
+    else {
+      return 'about' + Math.round(elapsed / msPerYear) + ' years' + tense;
+    }
+  }
+
+  function judgeTense(now, eventStart, eventEnd) {
+    if      (eventEnd   < now) { return -1; }
+    else if (eventStart > now) { return  1; }
+    else                       { return  0; }
+  }
+
+  function buildEventDOM(tense, event) {
+    var tenseClass = '';
+    var start      = event.start.dateTime;
+    var end        = event.end.dateTime;
+    switch(tense) {
+      case 0 : // now
+        tenseClass = 'event-now';
+        break;
+      case 1 : // future
+        tenseClass = 'event-future';
+        break;
+      case -1: // past
+        tenseClass = 'event-past';
+        break;
+      default:
+        throw 'Time data error';
+    }
+    var durationFormat = {
+      weekday: 'short',
+      hour   : '2-digit',
+      minute : '2-digit'
+    };
+    var relativeTimeStr = (tense === 0) ? 'NOW' : getRelativeTime(now, start);
+    var durationStr = start.toLocaleTimeString([], durationFormat) + ' - ' + end.toLocaleTimeString([], durationFormat);
+
+    var locationDOM = '';
+    if (calendar.showLocation && event.location) {
+      locationDOM = '<span class="event-location event-details">' + event.location + '</span>';
+    }
+
+    var eventContent = `<div class="event ${tenseClass}">
+        <h2 class="event-summary">
+          ${event.summary}
+          <span class="event-relative-time">${relativeTimeStr}</span>
+        </h2>
+        ${locationDOM}
+        <span class="event-duration event-details">${durationStr}</span>
+      </div>`;
+    return eventContent;
+  }
+})();
+</script>
+
+        
       </div>
       
       
@@ -281,7 +468,7 @@
     <img class="site-author-image" itemprop="image" alt="心念"
       src="/images/avatar.gif">
   <p class="site-author-name" itemprop="name">心念</p>
-  <div class="site-description" itemprop="description"></div>
+  <div class="site-description" itemprop="description">心有所向，无问东西</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
@@ -291,6 +478,18 @@
           <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -339,11 +538,65 @@
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">心念</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">2k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3 分钟</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共809字</span>
+</div>
+
+<!-- 网站运行时间的设置 -->
+<span id="timeDate">载入天数...</span>
+<span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("03/01/2023 10:00:00"); //此处修改你的建站时间或者网站上线时间
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒.";
+    }
+setInterval("createtime()",250);
+</script>
 
         
+<div class="busuanzi-count">
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -441,6 +694,10 @@ window.addEventListener('pjax:success', () => {
 
 
 
+  
+<script src="/js/local-search.js"></script>
+
+
 
 
 
@@ -456,7 +713,27 @@ window.addEventListener('pjax:success', () => {
   
 
   
-
+<div class="moon-menu">
+  <div class="moon-menu-items">
+    
+    <div id="moon-menu-item-back2bottom" class="moon-menu-item">
+      <i class='fas fa-chevron-down'></i>    </div>
+    
+    <div id="moon-menu-item-back2top" class="moon-menu-item">
+      <i class='fas fa-chevron-up'></i>    </div>
+    
+  </div>
+  <div class="moon-menu-button">
+    <svg class="moon-menu-bg">
+      <circle class="moon-menu-cricle" cx="50%" cy="50%" r="44%"></circle>
+      <circle class="moon-menu-border" cx="50%" cy="50%" r="48%"></circle>
+    </svg>
+    <div class="moon-menu-content">
+      <div class="moon-menu-icon"><i class='fas fa-ellipsis-v'></i></div>
+      <div class="moon-menu-text"></div>
+    </div>
+  </div>
+</div><script src="/js/injector.js"></script>
     </div>
 </body>
 </html>
