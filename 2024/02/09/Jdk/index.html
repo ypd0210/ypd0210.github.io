@@ -23,22 +23,22 @@
     var CONFIG = {"hostname":"ypd0210.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="本文章按照主流的Java教学视频黑马程序员总结：1Java基础 → Javaweb（含SSM框架）→ 苍穹外卖项目 → 微服务 → 黑马头条项目、学成在线项目 → Java大厂面试专题课  Java学习路线详细介绍:第一阶段：Java基础Java上部：黑马程序员Java零基础视频教程_上部（Java入门，含斯坦福大学练习题+力扣算法题和大厂java面试题） Java下部：黑马程序员Java零基础视">
+  <meta name="description" content="认识JDK，JVM和JRE：JDK（Java Development Kit）一、简介：JDK（Java Development Kit，Java开发工具包）JDK为Java应用程序提供了基本的开发和运行环境，是整个Java的核心，包括：  Java运行环境（JRE） JDK类库，如：java.lang、java.io、java.awt、java.swing等类 Java开发工具，如：javac.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="text2">
-<meta property="og:url" content="https://ypd0210.github.io/2024/02/09/text2/index.html">
+<meta property="og:title" content="Java开发工具的安装与环境配置">
+<meta property="og:url" content="https://ypd0210.github.io/2024/02/09/Jdk/index.html">
 <meta property="og:site_name" content="心念的Blog">
-<meta property="og:description" content="本文章按照主流的Java教学视频黑马程序员总结：1Java基础 → Javaweb（含SSM框架）→ 苍穹外卖项目 → 微服务 → 黑马头条项目、学成在线项目 → Java大厂面试专题课  Java学习路线详细介绍:第一阶段：Java基础Java上部：黑马程序员Java零基础视频教程_上部（Java入门，含斯坦福大学练习题+力扣算法题和大厂java面试题） Java下部：黑马程序员Java零基础视">
+<meta property="og:description" content="认识JDK，JVM和JRE：JDK（Java Development Kit）一、简介：JDK（Java Development Kit，Java开发工具包）JDK为Java应用程序提供了基本的开发和运行环境，是整个Java的核心，包括：  Java运行环境（JRE） JDK类库，如：java.lang、java.io、java.awt、java.swing等类 Java开发工具，如：javac.">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://ypd0210.github.io/2024/02/09/text2/java_1.png">
-<meta property="og:image" content="https://ypd0210.github.io/2024/02/09/text2/java_2.png">
+<meta property="og:image" content="https://ypd0210.github.io/2024/02/09/Jdk/folder.png">
+<meta property="og:image" content="https://ypd0210.github.io/2024/02/09/Jdk/relationship.png">
 <meta property="article:published_time" content="2024-02-09T05:31:44.000Z">
-<meta property="article:modified_time" content="2024-02-09T05:37:30.560Z">
+<meta property="article:modified_time" content="2024-02-10T04:41:17.133Z">
 <meta property="article:author" content="心念">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://ypd0210.github.io/2024/02/09/text2/java_1.png">
+<meta name="twitter:image" content="https://ypd0210.github.io/2024/02/09/Jdk/folder.png">
 
-<link rel="canonical" href="https://ypd0210.github.io/2024/02/09/text2/">
+<link rel="canonical" href="https://ypd0210.github.io/2024/02/09/Jdk/">
 
 
 <script id="page-configurations">
@@ -51,7 +51,7 @@
   };
 </script>
 
-  <title>text2 | 心念的Blog</title>
+  <title>Java开发工具的安装与环境配置 | 心念的Blog</title>
   
 
 
@@ -177,7 +177,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://ypd0210.github.io/2024/02/09/text2/">
+    <link itemprop="mainEntityOfPage" href="https://ypd0210.github.io/2024/02/09/Jdk/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -190,7 +190,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          text2
+          Java开发工具的安装与环境配置
         </h1>
 
         <div class="post-meta">
@@ -199,10 +199,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2024-02-09 13:31:44 / 修改时间：13:37:30" itemprop="dateCreated datePublished" datetime="2024-02-09T13:31:44+08:00">2024-02-09</time>
+              <time title="创建时间：2024-02-09 13:31:44" itemprop="dateCreated datePublished" datetime="2024-02-09T13:31:44+08:00">2024-02-09</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-02-10 12:41:17" itemprop="dateModified" datetime="2024-02-10T12:41:17+08:00">2024-02-10</time>
+              </span>
 
           
 
@@ -215,9 +221,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="本文章按照主流的Java教学视频黑马程序员总结："><a href="#本文章按照主流的Java教学视频黑马程序员总结：" class="headerlink" title="本文章按照主流的Java教学视频黑马程序员总结："></a>本文章按照主流的Java教学视频黑马程序员总结：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Java基础 → Javaweb（含SSM框架）→ 苍穹外卖项目 → 微服务 → 黑马头条项目、学成在线项目 → Java大厂面试专题课 </span><br></pre></td></tr></table></figure>
-<h1 id="Java学习路线详细介绍"><a href="#Java学习路线详细介绍" class="headerlink" title="Java学习路线详细介绍:"></a>Java学习路线详细介绍:</h1><h2 id="第一阶段：Java基础"><a href="#第一阶段：Java基础" class="headerlink" title="第一阶段：Java基础"></a>第一阶段：Java基础</h2><h3 id="Java上部："><a href="#Java上部：" class="headerlink" title="Java上部："></a>Java上部：</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV17F411T7Ao/?vd_source=d7a33feaa3960b442fceb87a398de9fe">黑马程序员Java零基础视频教程_上部（Java入门，含斯坦福大学练习题+力扣算法题和大厂java面试题）</a><br><img src="/2024/02/09/text2/java_1.png" alt="alt text"></p>
-<h3 id="Java下部："><a href="#Java下部：" class="headerlink" title="Java下部："></a>Java下部：</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1yW4y1Y7Ms/?vd_source=d7a33feaa3960b442fceb87a398de9fe">黑马程序员Java零基础视频教程_下部(Java入门，含斯坦福大学练习题+力扣算法题和大厂java面试题）</a><br><img src="/2024/02/09/text2/java_2.png" alt="alt text"></p>
+        <h1 id="认识JDK，JVM和JRE："><a href="#认识JDK，JVM和JRE：" class="headerlink" title="认识JDK，JVM和JRE："></a>认识JDK，JVM和JRE：</h1><h2 id="JDK（Java-Development-Kit）"><a href="#JDK（Java-Development-Kit）" class="headerlink" title="JDK（Java Development Kit）"></a>JDK（Java Development Kit）</h2><h3 id="一、简介："><a href="#一、简介：" class="headerlink" title="一、简介："></a>一、简介：</h3><h4 id="JDK（Java-Development-Kit，Java开发工具包）"><a href="#JDK（Java-Development-Kit，Java开发工具包）" class="headerlink" title="JDK（Java Development Kit，Java开发工具包）"></a><font color="red">JDK（Java Development Kit，Java开发工具包）</font></h4><p>JDK为Java应用程序提供了基本的开发和运行环境，是整个Java的核心，包括：</p>
+<ol>
+<li>Java运行环境（JRE）</li>
+<li>JDK类库，如：java.lang、java.io、java.awt、java.swing等类</li>
+<li>Java开发工具，如：javac.exe（编译工具）、java.exe（运行工具）、javadoc.exe（生成JavaDoc文档的工具）和jar.exe（打包工具）等</li>
+</ol>
+<p>Java安装包中的对应关系（如图所示）:<br><img src="/2024/02/09/Jdk/folder.png" alt="安装包位置"></p>
+<h4 id="JRE（Java-Runtime-Environment，Java运行环境）"><a href="#JRE（Java-Runtime-Environment，Java运行环境）" class="headerlink" title="JRE（Java Runtime Environment，Java运行环境）"></a><font color="red">JRE（Java Runtime Environment，Java运行环境）</font></h4><p>JRE是Java程序的运行环境，包含：JVM和Java核心类库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">当下发一个Java程序时，想要在一个全新的环境下运行一个Java程序只需要安装JRE就可以</span><br></pre></td></tr></table></figure>
+
+<h4 id="JVM（Java-Virtual-Machine，Java虚拟机）"><a href="#JVM（Java-Virtual-Machine，Java虚拟机）" class="headerlink" title="JVM（Java Virtual Machine，Java虚拟机）"></a><font color="red">JVM（Java Virtual Machine，Java虚拟机）</font></h4><p>JVM即Java虚拟机，是整个Java实现跨平台的最核心的部分，是编译后的Java程序（.class文件）和硬件系统的接口，不仅解释执行编译后的Java指令，而且还进行安全检查</p>
+<h4 id="三者关系："><a href="#三者关系：" class="headerlink" title="三者关系："></a>三者关系：</h4><p>JDK &#x3D; JRE + 其他<br>JRE &#x3D; JVM + 其他</p>
+<h3 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h3><p>以下是JDK，JRE和JVM三者的关系图<br><img src="/2024/02/09/Jdk/relationship.png" alt="关系图"></p>
+<p>以上就是上述三者的关系概述！还请指正！</p>
 
     </div>
 
@@ -233,7 +250,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://ypd0210.github.io/2024/02/09/text2/" title="text2">https://ypd0210.github.io/2024/02/09/text2/</a>
+    <a href="https://ypd0210.github.io/2024/02/09/Jdk/" title="Java开发工具的安装与环境配置">https://ypd0210.github.io/2024/02/09/Jdk/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -333,7 +350,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AC%E6%96%87%E7%AB%A0%E6%8C%89%E7%85%A7%E4%B8%BB%E6%B5%81%E7%9A%84Java%E6%95%99%E5%AD%A6%E8%A7%86%E9%A2%91%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98%E6%80%BB%E7%BB%93%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">本文章按照主流的Java教学视频黑马程序员总结：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D"><span class="nav-number"></span> <span class="nav-text">Java学习路线详细介绍:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%EF%BC%9AJava%E5%9F%BA%E7%A1%80"><span class="nav-number"></span> <span class="nav-text">第一阶段：Java基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Java%E4%B8%8A%E9%83%A8%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">Java上部：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java%E4%B8%8B%E9%83%A8%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">Java下部：</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%A4%E8%AF%86JDK%EF%BC%8CJVM%E5%92%8CJRE%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">认识JDK，JVM和JRE：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JDK%EF%BC%88Java-Development-Kit%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">JDK（Java Development Kit）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%AE%80%E4%BB%8B%EF%BC%9A"><span class="nav-number">1.1.1.</span> <span class="nav-text">一、简介：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#JDK%EF%BC%88Java-Development-Kit%EF%BC%8CJava%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%8C%85%EF%BC%89"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">JDK（Java Development Kit，Java开发工具包）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JRE%EF%BC%88Java-Runtime-Environment%EF%BC%8CJava%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%EF%BC%89"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">JRE（Java Runtime Environment，Java运行环境）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JVM%EF%BC%88Java-Virtual-Machine%EF%BC%8CJava%E8%99%9A%E6%8B%9F%E6%9C%BA%EF%BC%89"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">JVM（Java Virtual Machine，Java虚拟机）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E8%80%85%E5%85%B3%E7%B3%BB%EF%BC%9A"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">三者关系：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E8%A7%A3"><span class="nav-number">1.1.2.</span> <span class="nav-text">图解</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
