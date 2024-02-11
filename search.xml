@@ -1,45 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Java的学习之路</title>
-    <url>/2024/02/09/JavaRoad/</url>
-    <content><![CDATA[<h3 id="本文章按照主流的Java教学视频黑马程序员总结："><a href="#本文章按照主流的Java教学视频黑马程序员总结：" class="headerlink" title="本文章按照主流的Java教学视频黑马程序员总结："></a>本文章按照主流的Java教学视频黑马程序员总结：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Java基础 → Javaweb（含SSM框架）→ 苍穹外卖项目 → 微服务 → 黑马头条项目、学成在线项目 → Java大厂面试专题课 </span><br></pre></td></tr></table></figure>
-<h1 id="Java学习路线详细介绍"><a href="#Java学习路线详细介绍" class="headerlink" title="Java学习路线详细介绍:"></a>Java学习路线详细介绍:</h1><h2 id="第一阶段：Java基础"><a href="#第一阶段：Java基础" class="headerlink" title="第一阶段：Java基础"></a>第一阶段：Java基础</h2><p>Java基础的天花板教程，面向0基础同学，有手就行。从0开始，到进阶，起飞，层层递进。课程中会讲解很多编程思想，以及我是如何从0开始去分析一个问题，并把代码写出来的。拒绝一听就懂，一学就废。 </p>
-<h3 id="Java上部："><a href="#Java上部：" class="headerlink" title="Java上部："></a>Java上部：</h3><p><a href="https://www.bilibili.com/video/BV17F411T7Ao/?vd_source=d7a33feaa3960b442fceb87a398de9fe">黑马程序员Java零基础视频教程_上部（Java入门，含斯坦福大学练习题+力扣算法题和大厂java面试题）</a><br><a href="https://www.bilibili.com/video/BV17F411T7Ao/?vd_source=d7a33feaa3960b442fceb87a398de9fe"><img src="/2024/02/09/JavaRoad/java_1.png" alt="alt text"></a></p>
-<h3 id="Java下部："><a href="#Java下部：" class="headerlink" title="Java下部："></a>Java下部：</h3><p><a href="https://www.bilibili.com/video/BV1yW4y1Y7Ms/?vd_source=d7a33feaa3960b442fceb87a398de9fe">黑马程序员Java零基础视频教程_下部(Java入门，含斯坦福大学练习题+力扣算法题和大厂java面试题）</a><br><a href="https://www.bilibili.com/video/BV1yW4y1Y7Ms/?vd_source=d7a33feaa3960b442fceb87a398de9fe"><img src="/2024/02/09/JavaRoad/java_2.png" alt="alt text"></a></p>
-<h2 id="Java-Web框架"><a href="#Java-Web框架" class="headerlink" title="Java Web框架"></a>Java Web框架</h2><p>学前导读：本阶段深入讲解JavaWeb核心技术，学完本阶段课程可以制作中小型网站和企业管理系统等。</p>
-<p>JavaWeb（包含Tomcat、MySQL、Servlet、Spring、SpringMVC、Mybatis、SpringBoot、Maven…）</p>
-<p>2023年最新版Javaweb，基于主流的前后端分离的开发模式进行设计和讲解，基于主流的SpringBoot来讲解整个Web开发的知识点，参照企业开发模式，需求分析-表结构设计-接口文档-功能接口实现-测试-联调，理论与实践相结合，通过案例贯穿整个课程体系，学以致用。 </p>
-<p><a href="https://www.bilibili.com/video/BV1m84y1w7Tb/">黑马程序员JavaWeb开发教程，实现javaweb企业开发全流程（涵盖Spring+MyBatis+SpringMVC+SpringBoot等）</a></p>
-<p><a href="https://www.bilibili.com/video/BV1m84y1w7Tb/"><img src="/2024/02/09/JavaRoad/JavaWeb.png" alt="Java Web课程"></a></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java学习规划</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java开发工具的安装与环境配置</title>
-    <url>/2024/02/09/Jdk/</url>
-    <content><![CDATA[<h1 id="认识JDK，JVM和JRE："><a href="#认识JDK，JVM和JRE：" class="headerlink" title="认识JDK，JVM和JRE："></a>认识JDK，JVM和JRE：</h1><h2 id="JDK（Java-Development-Kit）"><a href="#JDK（Java-Development-Kit）" class="headerlink" title="JDK（Java Development Kit）"></a>JDK（Java Development Kit）</h2><h3 id="一、简介："><a href="#一、简介：" class="headerlink" title="一、简介："></a>一、简介：</h3><h4 id="JDK（Java-Development-Kit，Java开发工具包）"><a href="#JDK（Java-Development-Kit，Java开发工具包）" class="headerlink" title="JDK（Java Development Kit，Java开发工具包）"></a><font color="red">JDK（Java Development Kit，Java开发工具包）</font></h4><p>JDK为Java应用程序提供了基本的开发和运行环境，是整个Java的核心，包括：</p>
-<ol>
-<li>Java运行环境（JRE）</li>
-<li>JDK类库，如：java.lang、java.io、java.awt、java.swing等类</li>
-<li>Java开发工具，如：javac.exe（编译工具）、java.exe（运行工具）、javadoc.exe（生成JavaDoc文档的工具）和jar.exe（打包工具）等</li>
-</ol>
-<p>Java安装包中的对应关系（如图所示）:<br><img src="/2024/02/09/Jdk/folder.png" alt="安装包位置"></p>
-<h4 id="JRE（Java-Runtime-Environment，Java运行环境）"><a href="#JRE（Java-Runtime-Environment，Java运行环境）" class="headerlink" title="JRE（Java Runtime Environment，Java运行环境）"></a><font color="red">JRE（Java Runtime Environment，Java运行环境）</font></h4><p>JRE是Java程序的运行环境，包含：JVM和Java核心类库</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">当下发一个Java程序时，想要在一个全新的环境下运行一个Java程序只需要安装JRE就可以</span><br></pre></td></tr></table></figure>
-
-<h4 id="JVM（Java-Virtual-Machine，Java虚拟机）"><a href="#JVM（Java-Virtual-Machine，Java虚拟机）" class="headerlink" title="JVM（Java Virtual Machine，Java虚拟机）"></a><font color="red">JVM（Java Virtual Machine，Java虚拟机）</font></h4><p>JVM即Java虚拟机，是整个Java实现跨平台的最核心的部分，是编译后的Java程序（.class文件）和硬件系统的接口，不仅解释执行编译后的Java指令，而且还进行安全检查</p>
-<h4 id="三者关系："><a href="#三者关系：" class="headerlink" title="三者关系："></a>三者关系：</h4><p>JDK &#x3D; JRE + 其他<br>JRE &#x3D; JVM + 其他</p>
-<h3 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h3><p>以下是JDK，JRE和JVM三者的关系图<br><img src="/2024/02/09/Jdk/relationship.png" alt="关系图"></p>
-<p>以上就是上述三者的关系概述！还请指正！</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Hello world</title>
     <url>/2024/02/07/hello-world/</url>
     <content><![CDATA[<p>欢迎来到心念的Blog，很抱歉来的太晚了，但是如果你能在我这里有所收获，我想晚来一会儿也没有什么过错。好啦，陌生人，咱们该学习了，加油！</p>
@@ -63,6 +24,45 @@
         <tag>欢迎</tag>
         <tag>简介</tag>
         <tag>个人介绍</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java开发工具的安装与环境配置</title>
+    <url>/2024/02/09/Jdk/</url>
+    <content><![CDATA[<h1 id="认识JDK，JVM和JRE："><a href="#认识JDK，JVM和JRE：" class="headerlink" title="认识JDK，JVM和JRE："></a>认识JDK，JVM和JRE：</h1><h2 id="JDK（Java-Development-Kit）"><a href="#JDK（Java-Development-Kit）" class="headerlink" title="JDK（Java Development Kit）"></a>JDK（Java Development Kit）</h2><h3 id="一、简介："><a href="#一、简介：" class="headerlink" title="一、简介："></a>一、简介：</h3><h4 id="JDK（Java-Development-Kit，Java开发工具包）"><a href="#JDK（Java-Development-Kit，Java开发工具包）" class="headerlink" title="JDK（Java Development Kit，Java开发工具包）"></a><font color="red">JDK（Java Development Kit，Java开发工具包）</font></h4><p>JDK为Java应用程序提供了基本的开发和运行环境，是整个Java的核心，包括：</p>
+<ol>
+<li>Java运行环境（JRE）</li>
+<li>JDK类库，如：java.lang、java.io、java.awt、java.swing等类</li>
+<li>Java开发工具，如：javac.exe（编译工具）、java.exe（运行工具）、javadoc.exe（生成JavaDoc文档的工具）和jar.exe（打包工具）等</li>
+</ol>
+<p>Java安装包中的对应关系（如图所示）:<br><img src="/2024/02/09/Jdk/folder.png" alt="安装包位置"></p>
+<h4 id="JRE（Java-Runtime-Environment，Java运行环境）"><a href="#JRE（Java-Runtime-Environment，Java运行环境）" class="headerlink" title="JRE（Java Runtime Environment，Java运行环境）"></a><font color="red">JRE（Java Runtime Environment，Java运行环境）</font></h4><p>JRE是Java程序的运行环境，包含：JVM和Java核心类库</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">当下发一个Java程序时，想要在一个全新的环境下运行一个Java程序只需要安装JRE就可以</span><br></pre></td></tr></table></figure>
+
+<h4 id="JVM（Java-Virtual-Machine，Java虚拟机）"><a href="#JVM（Java-Virtual-Machine，Java虚拟机）" class="headerlink" title="JVM（Java Virtual Machine，Java虚拟机）"></a><font color="red">JVM（Java Virtual Machine，Java虚拟机）</font></h4><p>JVM即Java虚拟机，是整个Java实现跨平台的最核心的部分，是编译后的Java程序（.class文件）和硬件系统的接口，不仅解释执行编译后的Java指令，而且还进行安全检查</p>
+<h4 id="三者关系："><a href="#三者关系：" class="headerlink" title="三者关系："></a>三者关系：</h4><p>JDK &#x3D; JRE + 其他<br>JRE &#x3D; JVM + 其他</p>
+<h3 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h3><p>以下是JDK，JRE和JVM三者的关系图<br><img src="/2024/02/09/Jdk/relationship.png" alt="关系图"></p>
+<p>以上就是上述三者的关系概述！还请指正！</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Java的学习之路</title>
+    <url>/2024/02/09/JavaRoad/</url>
+    <content><![CDATA[<h3 id="本文章按照主流的Java教学视频黑马程序员总结："><a href="#本文章按照主流的Java教学视频黑马程序员总结：" class="headerlink" title="本文章按照主流的Java教学视频黑马程序员总结："></a>本文章按照主流的Java教学视频黑马程序员总结：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Java基础 → Javaweb（含SSM框架）→ 苍穹外卖项目 → 微服务 → 黑马头条项目、学成在线项目 → Java大厂面试专题课 </span><br></pre></td></tr></table></figure>
+<h1 id="Java学习路线详细介绍"><a href="#Java学习路线详细介绍" class="headerlink" title="Java学习路线详细介绍:"></a>Java学习路线详细介绍:</h1><h2 id="第一阶段：Java基础"><a href="#第一阶段：Java基础" class="headerlink" title="第一阶段：Java基础"></a>第一阶段：Java基础</h2><p>Java基础的天花板教程，面向0基础同学，有手就行。从0开始，到进阶，起飞，层层递进。课程中会讲解很多编程思想，以及我是如何从0开始去分析一个问题，并把代码写出来的。拒绝一听就懂，一学就废。 </p>
+<h3 id="Java上部："><a href="#Java上部：" class="headerlink" title="Java上部："></a>Java上部：</h3><p><a href="https://www.bilibili.com/video/BV17F411T7Ao/?vd_source=d7a33feaa3960b442fceb87a398de9fe">黑马程序员Java零基础视频教程_上部（Java入门，含斯坦福大学练习题+力扣算法题和大厂java面试题）</a><br><a href="https://www.bilibili.com/video/BV17F411T7Ao/?vd_source=d7a33feaa3960b442fceb87a398de9fe"><img src="/2024/02/09/JavaRoad/java_1.png" alt="alt text"></a></p>
+<h3 id="Java下部："><a href="#Java下部：" class="headerlink" title="Java下部："></a>Java下部：</h3><p><a href="https://www.bilibili.com/video/BV1yW4y1Y7Ms/?vd_source=d7a33feaa3960b442fceb87a398de9fe">黑马程序员Java零基础视频教程_下部(Java入门，含斯坦福大学练习题+力扣算法题和大厂java面试题）</a><br><a href="https://www.bilibili.com/video/BV1yW4y1Y7Ms/?vd_source=d7a33feaa3960b442fceb87a398de9fe"><img src="/2024/02/09/JavaRoad/java_2.png" alt="alt text"></a></p>
+<h2 id="Java-Web框架"><a href="#Java-Web框架" class="headerlink" title="Java Web框架"></a>Java Web框架</h2><p>学前导读：本阶段深入讲解JavaWeb核心技术，学完本阶段课程可以制作中小型网站和企业管理系统等。</p>
+<p>JavaWeb（包含Tomcat、MySQL、Servlet、Spring、SpringMVC、Mybatis、SpringBoot、Maven…）</p>
+<p>2023年最新版Javaweb，基于主流的前后端分离的开发模式进行设计和讲解，基于主流的SpringBoot来讲解整个Web开发的知识点，参照企业开发模式，需求分析-表结构设计-接口文档-功能接口实现-测试-联调，理论与实践相结合，通过案例贯穿整个课程体系，学以致用。 </p>
+<p><a href="https://www.bilibili.com/video/BV1m84y1w7Tb/">黑马程序员JavaWeb开发教程，实现javaweb企业开发全流程（涵盖Spring+MyBatis+SpringMVC+SpringBoot等）</a></p>
+<p><a href="https://www.bilibili.com/video/BV1m84y1w7Tb/"><img src="/2024/02/09/JavaRoad/JavaWeb.png" alt="Java Web课程"></a></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java学习规划</tag>
       </tags>
   </entry>
 </search>
