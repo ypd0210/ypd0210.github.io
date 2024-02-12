@@ -27,25 +27,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Java开发工具的安装与环境配置</title>
-    <url>/2024/02/09/Jdk/</url>
-    <content><![CDATA[<h1 id="认识JDK，JVM和JRE："><a href="#认识JDK，JVM和JRE：" class="headerlink" title="认识JDK，JVM和JRE："></a>认识JDK，JVM和JRE：</h1><h2 id="JDK（Java-Development-Kit）"><a href="#JDK（Java-Development-Kit）" class="headerlink" title="JDK（Java Development Kit）"></a>JDK（Java Development Kit）</h2><h3 id="一、简介："><a href="#一、简介：" class="headerlink" title="一、简介："></a>一、简介：</h3><h4 id="JDK（Java-Development-Kit，Java开发工具包）"><a href="#JDK（Java-Development-Kit，Java开发工具包）" class="headerlink" title="JDK（Java Development Kit，Java开发工具包）"></a><font color="red">JDK（Java Development Kit，Java开发工具包）</font></h4><p>JDK为Java应用程序提供了基本的开发和运行环境，是整个Java的核心，包括：</p>
-<ol>
-<li>Java运行环境（JRE）</li>
-<li>JDK类库，如：java.lang、java.io、java.awt、java.swing等类</li>
-<li>Java开发工具，如：javac.exe（编译工具）、java.exe（运行工具）、javadoc.exe（生成JavaDoc文档的工具）和jar.exe（打包工具）等</li>
-</ol>
-<p>Java安装包中的对应关系（如图所示）:<br><img src="/2024/02/09/Jdk/folder.png" alt="安装包位置"></p>
-<h4 id="JRE（Java-Runtime-Environment，Java运行环境）"><a href="#JRE（Java-Runtime-Environment，Java运行环境）" class="headerlink" title="JRE（Java Runtime Environment，Java运行环境）"></a><font color="red">JRE（Java Runtime Environment，Java运行环境）</font></h4><p>JRE是Java程序的运行环境，包含：JVM和Java核心类库</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">当下发一个Java程序时，想要在一个全新的环境下运行一个Java程序只需要安装JRE就可以</span><br></pre></td></tr></table></figure>
-
-<h4 id="JVM（Java-Virtual-Machine，Java虚拟机）"><a href="#JVM（Java-Virtual-Machine，Java虚拟机）" class="headerlink" title="JVM（Java Virtual Machine，Java虚拟机）"></a><font color="red">JVM（Java Virtual Machine，Java虚拟机）</font></h4><p>JVM即Java虚拟机，是整个Java实现跨平台的最核心的部分，是编译后的Java程序（.class文件）和硬件系统的接口，不仅解释执行编译后的Java指令，而且还进行安全检查</p>
-<h4 id="三者关系："><a href="#三者关系：" class="headerlink" title="三者关系："></a>三者关系：</h4><p>JDK &#x3D; JRE + 其他<br>JRE &#x3D; JVM + 其他</p>
-<h3 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h3><p>以下是JDK，JRE和JVM三者的关系图<br><img src="/2024/02/09/Jdk/relationship.png" alt="关系图"></p>
-<p>以上就是上述三者的关系概述！还请指正！</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Java的学习之路</title>
     <url>/2024/02/09/JavaRoad/</url>
     <content><![CDATA[<h3 id="本文章按照主流的Java教学视频黑马程序员总结："><a href="#本文章按照主流的Java教学视频黑马程序员总结：" class="headerlink" title="本文章按照主流的Java教学视频黑马程序员总结："></a>本文章按照主流的Java教学视频黑马程序员总结：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Java基础 → Javaweb（含SSM框架）→ 苍穹外卖项目 → 微服务 → 黑马头条项目、学成在线项目 → Java大厂面试专题课 </span><br></pre></td></tr></table></figure>
@@ -64,5 +45,24 @@
       <tags>
         <tag>Java学习规划</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Java开发工具的安装与环境配置</title>
+    <url>/2024/02/09/Jdk/</url>
+    <content><![CDATA[<h1 id="认识JDK，JVM和JRE："><a href="#认识JDK，JVM和JRE：" class="headerlink" title="认识JDK，JVM和JRE："></a>认识JDK，JVM和JRE：</h1><h2 id="JDK（Java-Development-Kit）"><a href="#JDK（Java-Development-Kit）" class="headerlink" title="JDK（Java Development Kit）"></a>JDK（Java Development Kit）</h2><h3 id="一、简介："><a href="#一、简介：" class="headerlink" title="一、简介："></a>一、简介：</h3><h4 id="JDK（Java-Development-Kit，Java开发工具包）"><a href="#JDK（Java-Development-Kit，Java开发工具包）" class="headerlink" title="JDK（Java Development Kit，Java开发工具包）"></a><font color="red">JDK（Java Development Kit，Java开发工具包）</font></h4><p>JDK为Java应用程序提供了基本的开发和运行环境，是整个Java的核心，包括：</p>
+<ol>
+<li>Java运行环境（JRE）</li>
+<li>JDK类库，如：java.lang、java.io、java.awt、java.swing等类</li>
+<li>Java开发工具，如：javac.exe（编译工具）、java.exe（运行工具）、javadoc.exe（生成JavaDoc文档的工具）和jar.exe（打包工具）等</li>
+</ol>
+<p>Java安装包中的对应关系（如图所示）:<br><img src="/2024/02/09/Jdk/folder.png" alt="安装包位置"></p>
+<h4 id="JRE（Java-Runtime-Environment，Java运行环境）"><a href="#JRE（Java-Runtime-Environment，Java运行环境）" class="headerlink" title="JRE（Java Runtime Environment，Java运行环境）"></a><font color="red">JRE（Java Runtime Environment，Java运行环境）</font></h4><p>JRE是Java程序的运行环境，包含：JVM和Java核心类库</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">当下发一个Java程序时，想要在一个全新的环境下运行一个Java程序只需要安装JRE就可以</span><br></pre></td></tr></table></figure>
+
+<h4 id="JVM（Java-Virtual-Machine，Java虚拟机）"><a href="#JVM（Java-Virtual-Machine，Java虚拟机）" class="headerlink" title="JVM（Java Virtual Machine，Java虚拟机）"></a><font color="red">JVM（Java Virtual Machine，Java虚拟机）</font></h4><p>JVM即Java虚拟机，是整个Java实现跨平台的最核心的部分，是编译后的Java程序（.class文件）和硬件系统的接口，不仅解释执行编译后的Java指令，而且还进行安全检查</p>
+<h4 id="三者关系："><a href="#三者关系：" class="headerlink" title="三者关系："></a>三者关系：</h4><p>JDK &#x3D; JRE + 其他<br>JRE &#x3D; JVM + 其他</p>
+<h3 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h3><p>以下是JDK，JRE和JVM三者的关系图<br><img src="/2024/02/09/Jdk/relationship.png" alt="关系图"></p>
+<p>以上就是上述三者的关系概述！还请指正！</p>
+]]></content>
   </entry>
 </search>

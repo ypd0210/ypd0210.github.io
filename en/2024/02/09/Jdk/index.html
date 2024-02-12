@@ -26,17 +26,22 @@
     var CONFIG = {"hostname":"ypd0210.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="心有所向，无问东西">
-<meta property="og:type" content="website">
-<meta property="og:title" content="心念的Blog">
-<meta property="og:url" content="https://ypd0210.github.io/tags/%E4%B8%AA%E4%BA%BA%E4%BB%8B%E7%BB%8D/index.html">
+  <meta name="description" content="认识JDK，JVM和JRE：JDK（Java Development Kit）一、简介：JDK（Java Development Kit，Java开发工具包）JDK为Java应用程序提供了基本的开发和运行环境，是整个Java的核心，包括：  Java运行环境（JRE） JDK类库，如：java.lang、java.io、java.awt、java.swing等类 Java开发工具，如：javac.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java开发工具的安装与环境配置">
+<meta property="og:url" content="https://ypd0210.github.io/en/2024/02/09/Jdk/index.html">
 <meta property="og:site_name" content="心念的Blog">
-<meta property="og:description" content="心有所向，无问东西">
-<meta property="og:locale" content="zh_CN">
+<meta property="og:description" content="认识JDK，JVM和JRE：JDK（Java Development Kit）一、简介：JDK（Java Development Kit，Java开发工具包）JDK为Java应用程序提供了基本的开发和运行环境，是整个Java的核心，包括：  Java运行环境（JRE） JDK类库，如：java.lang、java.io、java.awt、java.swing等类 Java开发工具，如：javac.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://ypd0210.github.io/2024/02/09/Jdk/folder.png">
+<meta property="og:image" content="https://ypd0210.github.io/2024/02/09/Jdk/relationship.png">
+<meta property="article:published_time" content="2024-02-09T05:31:44.000Z">
+<meta property="article:modified_time" content="2024-02-10T13:14:39.871Z">
 <meta property="article:author" content="心念">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ypd0210.github.io/2024/02/09/Jdk/folder.png">
 
-<link rel="canonical" href="https://ypd0210.github.io/tags/%E4%B8%AA%E4%BA%BA%E4%BB%8B%E7%BB%8D/">
+<link rel="canonical" href="https://ypd0210.github.io/en/2024/02/09/Jdk/">
 
 
 <script id="page-configurations">
@@ -44,12 +49,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
-    lang   : 'zh-CN'
+    isPost : true,
+    lang   : 'en'
   };
 </script>
 
-  <title>标签: 个人介绍 | 心念的Blog</title>
+  <title>Java开发工具的安装与环境配置 | 心念的Blog</title>
   
 
 
@@ -89,7 +94,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
+    <div class="toggle" aria-label="Toggle navigation bar">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -120,32 +125,32 @@
   <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
         <li class="menu-item menu-item-schedule">
 
-    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
+    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>Schedule</a>
 
   </li>
         <li class="menu-item menu-item-photo">
@@ -154,7 +159,7 @@
 
   </li>
       <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
       </li>
   </ul>
@@ -170,7 +175,7 @@
   </span>
   <div class="search-input-container">
     <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
+           placeholder="Searching..." spellcheck="false"
            type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
@@ -204,57 +209,163 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">个人介绍
-          <small>标签</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://ypd0210.github.io/2024/02/09/Jdk/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="心念">
+      <meta itemprop="description" content="心有所向，无问东西">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="心念的Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java开发工具的安装与环境配置
+        </h1>
+
+        <div class="post-meta">
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-02-09 13:31:44" itemprop="dateCreated datePublished" datetime="2024-02-09T13:31:44+08:00">2024-02-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-02-10 21:14:39" itemprop="dateModified" datetime="2024-02-10T21:14:39+08:00">2024-02-10</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>587</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2024</span>
-    </div>
+        <h1 id="认识JDK，JVM和JRE："><a href="#认识JDK，JVM和JRE：" class="headerlink" title="认识JDK，JVM和JRE："></a>认识JDK，JVM和JRE：</h1><h2 id="JDK（Java-Development-Kit）"><a href="#JDK（Java-Development-Kit）" class="headerlink" title="JDK（Java Development Kit）"></a>JDK（Java Development Kit）</h2><h3 id="一、简介："><a href="#一、简介：" class="headerlink" title="一、简介："></a>一、简介：</h3><h4 id="JDK（Java-Development-Kit，Java开发工具包）"><a href="#JDK（Java-Development-Kit，Java开发工具包）" class="headerlink" title="JDK（Java Development Kit，Java开发工具包）"></a><font color="red">JDK（Java Development Kit，Java开发工具包）</font></h4><p>JDK为Java应用程序提供了基本的开发和运行环境，是整个Java的核心，包括：</p>
+<ol>
+<li>Java运行环境（JRE）</li>
+<li>JDK类库，如：java.lang、java.io、java.awt、java.swing等类</li>
+<li>Java开发工具，如：javac.exe（编译工具）、java.exe（运行工具）、javadoc.exe（生成JavaDoc文档的工具）和jar.exe（打包工具）等</li>
+</ol>
+<p>Java安装包中的对应关系（如图所示）:<br><img src="/2024/02/09/Jdk/folder.png" alt="安装包位置"></p>
+<h4 id="JRE（Java-Runtime-Environment，Java运行环境）"><a href="#JRE（Java-Runtime-Environment，Java运行环境）" class="headerlink" title="JRE（Java Runtime Environment，Java运行环境）"></a><font color="red">JRE（Java Runtime Environment，Java运行环境）</font></h4><p>JRE是Java程序的运行环境，包含：JVM和Java核心类库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">当下发一个Java程序时，想要在一个全新的环境下运行一个Java程序只需要安装JRE就可以</span><br></pre></td></tr></table></figure>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2024-02-07T21:51:05+08:00"
-              content="2024-02-07">
-          02-07
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2024/02/07/hello-world/" itemprop="url">
-            <span itemprop="name">Hello world</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
+<h4 id="JVM（Java-Virtual-Machine，Java虚拟机）"><a href="#JVM（Java-Virtual-Machine，Java虚拟机）" class="headerlink" title="JVM（Java Virtual Machine，Java虚拟机）"></a><font color="red">JVM（Java Virtual Machine，Java虚拟机）</font></h4><p>JVM即Java虚拟机，是整个Java实现跨平台的最核心的部分，是编译后的Java程序（.class文件）和硬件系统的接口，不仅解释执行编译后的Java指令，而且还进行安全检查</p>
+<h4 id="三者关系："><a href="#三者关系：" class="headerlink" title="三者关系："></a>三者关系：</h4><p>JDK &#x3D; JRE + 其他<br>JRE &#x3D; JVM + 其他</p>
+<h3 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h3><p>以下是JDK，JRE和JVM三者的关系图<br><img src="/2024/02/09/Jdk/relationship.png" alt="关系图"></p>
+<p>以上就是上述三者的关系概述！还请指正！</p>
 
     </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>支持一下啦！小编想喝咖啡！</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.jpg" alt="心念 WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="心念 Alipay">
+        <p>Alipay</p>
+      </div>
+
   </div>
-  
-  
-  
+</div>
 
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>心念
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://ypd0210.github.io/2024/02/09/Jdk/" title="Java开发工具的安装与环境配置">https://ypd0210.github.io/2024/02/09/Jdk/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/02/09/JavaRoad/" rel="prev" title="Java的学习之路">
+      <i class="fa fa-chevron-left"></i> Java的学习之路
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -313,15 +424,16 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          文章目录
+          Table of Contents
         </li>
         <li class="sidebar-nav-overview">
-          站点概览
+          Overview
         </li>
       </ul>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%A4%E8%AF%86JDK%EF%BC%8CJVM%E5%92%8CJRE%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">认识JDK，JVM和JRE：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JDK%EF%BC%88Java-Development-Kit%EF%BC%89"><span class="nav-number">1.1.</span> <span class="nav-text">JDK（Java Development Kit）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%AE%80%E4%BB%8B%EF%BC%9A"><span class="nav-number">1.1.1.</span> <span class="nav-text">一、简介：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#JDK%EF%BC%88Java-Development-Kit%EF%BC%8CJava%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%8C%85%EF%BC%89"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">JDK（Java Development Kit，Java开发工具包）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JRE%EF%BC%88Java-Runtime-Environment%EF%BC%8CJava%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%EF%BC%89"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">JRE（Java Runtime Environment，Java运行环境）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JVM%EF%BC%88Java-Virtual-Machine%EF%BC%8CJava%E8%99%9A%E6%8B%9F%E6%9C%BA%EF%BC%89"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">JVM（Java Virtual Machine，Java虚拟机）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89%E8%80%85%E5%85%B3%E7%B3%BB%EF%BC%9A"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">三者关系：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E8%A7%A3"><span class="nav-number">1.1.2.</span> <span class="nav-text">图解</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -338,20 +450,20 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">3</span>
-          <span class="site-state-item-name">日志</span>
+          <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
         <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">分类</span></a>
+        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
         <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">标签</span></a>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
@@ -672,16 +784,16 @@ if(canvas.getContext){
   <div class="languages">
     <label class="lang-select-label">
       <i class="fa fa-language"></i>
-      <span>简体中文</span>
+      <span>English</span>
       <i class="fa fa-angle-up" aria-hidden="true"></i>
     </label>
     <select class="lang-select" data-canonical="">
       
-        <option value="zh-CN" data-href="/tags/%E4%B8%AA%E4%BA%BA%E4%BB%8B%E7%BB%8D/index.html" selected="">
+        <option value="zh-CN" data-href="/2024/02/09/Jdk/" selected="">
           简体中文
         </option>
       
-        <option value="en" data-href="/en/tags/%E4%B8%AA%E4%BA%BA%E4%BB%8B%E7%BB%8D/index.html" selected="">
+        <option value="en" data-href="/en/2024/02/09/Jdk/" selected="">
           English
         </option>
       
@@ -702,12 +814,12 @@ if(canvas.getContext){
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">2k</span>
+    <span title="Symbols count total">2k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3 分钟</span>
+    <span title="Reading time total">3 mins.</span>
 </div>
 
 
@@ -743,7 +855,7 @@ setInterval("createtime()",250);
       <span class="post-meta-item-icon">
         <i class="fa fa-user"></i>
       </span>
-      <span class="site-uv" title="总访客量">
+      <span class="site-uv" title="Total Visitors">
         <span id="busuanzi_value_site_uv"></span>
       </span>
     </span>
@@ -752,7 +864,7 @@ setInterval("createtime()",250);
       <span class="post-meta-item-icon">
         <i class="fa fa-eye"></i>
       </span>
-      <span class="site-pv" title="总访问量">
+      <span class="site-pv" title="Total Views">
         <span id="busuanzi_value_site_pv"></span>
       </span>
     </span>
@@ -876,6 +988,25 @@ window.addEventListener('pjax:success', () => {
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '3a4e7bdf87775ae47b55',
+      clientSecret: '8ef0b51c6fecb09683ba11adbe38c4950b153a59',
+      repo        : 'ypd0210.github.io',
+      owner       : 'ypd0210',
+      admin       : ['ypd0210'],
+      id          : 'd1e8e1833f5eb818939163e8d1e11bfa',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
     </div>
 </body>
