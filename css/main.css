@@ -1319,7 +1319,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #c44294;
+  background: #6cf024;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2879,7 +2879,7 @@ mjx-container + br {
   }
 }
 body {
-  background-image: url("https://images.pexels.com/photos/355465/pexels-photo-355465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-image: url("/images/background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
