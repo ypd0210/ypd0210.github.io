@@ -78,6 +78,53 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello world</title>
+    <url>/2024/02/07/hello-world/</url>
+    <content><![CDATA[<p>欢迎来到心念的Blog，很抱歉来的太晚了，但是如果你能在我这里有所收获，我想晚来一会儿也没有什么过错。好啦，陌生人，咱们该学习了，加油！</p>
+<h2 id="相对观众说的话："><a href="#相对观众说的话：" class="headerlink" title="相对观众说的话："></a>相对观众说的话：</h2><p>各位观众老爷：<br>    我作为一个双非本科的计算机学生来说，按照最近几年的就业形势我真的很难找到一个像样的工作，而且我来自于一个甘肃的小县城，本来网络技术这一方面就不是很发达，父母的观念也比较的保守，也不一定会让我去外面就业，所以了解了当前的行业情况之后，我挑选了一个自己热爱，而且门槛相对较低，又不是像python一样那种烂大街的语言————Java。并且开始了自己漫长的学习过程，今年，也就是2024年的春节期间，不习惯走亲戚的我最后下定决心，要在家干出一点属于自己的东西，下决心要在互联网上留下一点属于自己的东西，于是想起了多年之前给自己定下且没有完成的项目————搭建一个属于自己的博客网站，值得庆幸的的是在经过三天的努力和研究之后，我终于完成了网站的搭建和美化，并下定决心，要坚持将博客写下去。最后考虑在自己的blog网站写自己学习Java的一些心得和自己的经历，并会分享一些最近学习到的技术，如果你能在我这里学习到一些东西的话，可以收藏我的blog！ᵎ(•̀㉨•́)و ̑̑ 加油！！！</p>
+<h2 id="致谢："><a href="#致谢：" class="headerlink" title="致谢："></a>致谢：</h2><p>最后感谢下定决心要努力的自己！</p>
+<h2 id="tips："><a href="#tips：" class="headerlink" title="tips："></a>tips：</h2><p>最后感谢您的支持，这对我真的很重要！爱你么么哒！(ღ˘⌣˘ღ)</p>
+]]></content>
+      <categories>
+        <category>简介</category>
+      </categories>
+      <tags>
+        <tag>欢迎</tag>
+        <tag>简介</tag>
+        <tag>个人介绍</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>安装Jdk以及开发软件</title>
+    <url>/2024/02/14/%E5%AE%89%E8%A3%85Jdk%E4%BB%A5%E5%8F%8A%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6/</url>
+    <content><![CDATA[<h1 id="安装Jdk"><a href="#安装Jdk" class="headerlink" title="安装Jdk"></a>安装Jdk</h1><h2 id="1-下载Jdk"><a href="#1-下载Jdk" class="headerlink" title="1.下载Jdk"></a>1.下载Jdk</h2><p>想要下载jdk，我们一定要去甲骨文官网下载，防止从其他地方下载到流氓软件。请浏览器访问以下地址去<a href="https://www.oracle.com/cn/java/technologies/downloads/">下载</a>(你也可以置界点击蓝色的下载字体去跳转到官网)：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://www.oracle.com/cn/java/technologies/downloads/</span><br></pre></td></tr></table></figure>
+<p><img src="/2024/02/14/%E5%AE%89%E8%A3%85Jdk%E4%BB%A5%E5%8F%8A%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6/Java%E5%AE%98%E7%BD%91.png"></p>
+<p>我用的是Windows系统，所以如果你和我一样的话可以按照我的方式来安装。</p>
+<h2 id="2-安装Jdk"><a href="#2-安装Jdk" class="headerlink" title="2.安装Jdk"></a>2.安装Jdk</h2><p>首先我们找到Java的安装包双击打开它<br><img src="/2024/02/14/%E5%AE%89%E8%A3%85Jdk%E4%BB%A5%E5%8F%8A%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6/Java%E5%AE%89%E8%A3%851.png"><br>点击下一步<br><img src="/2024/02/14/%E5%AE%89%E8%A3%85Jdk%E4%BB%A5%E5%8F%8A%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6/Java%E5%AE%89%E8%A3%852.png"><br>在这里你可以按照你的需求更改你的安装位置，完成后点击下一步<br><img src="/2024/02/14/%E5%AE%89%E8%A3%85Jdk%E4%BB%A5%E5%8F%8A%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6/Java%E5%AE%89%E8%A3%853.png"><br>等待安装完成即可</p>
+<h3 id="3-验证是否安装完成"><a href="#3-验证是否安装完成" class="headerlink" title="3.验证是否安装完成"></a>3.验证是否安装完成</h3><p>我们安装完jdk之后一般都需要验证是否安装成功，接下来是验证步骤</p>
+<ol>
+<li>按下键盘上的win+R键，打开运行，然后输入CMD打开控制台<br><img src="/2024/02/14/%E5%AE%89%E8%A3%85Jdk%E4%BB%A5%E5%8F%8A%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6/CMD.png"></li>
+<li>在黑窗口输入 Java –version查看JDK版本<br><img src="/2024/02/14/%E5%AE%89%E8%A3%85Jdk%E4%BB%A5%E5%8F%8A%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6/Java-Version.png"></li>
+<li>如果你的显示结果与我的类似那么祝贺你安装成功</li>
+</ol>
+<h2 id="安装Idea"><a href="#安装Idea" class="headerlink" title="安装Idea"></a>安装Idea</h2><h3 id="下载idea"><a href="#下载idea" class="headerlink" title="下载idea"></a>下载idea</h3><p>我们刚才下载了jdk已经可以编写Java程序了，但是编写方式太原始了，效率十分的底下，所以我推荐使用idea来帮助大家提高代码的编写效率</p>
+<ol>
+<li>首先我们去访问官网下载,下面是idea community版本的下载地址<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://www.jetbrains.com/zh-cn/idea/download/?section=windows</span><br></pre></td></tr></table></figure></li>
+<li>接下来我们就可以安装我们所需要的版本了<br><img src="/2024/02/14/%E5%AE%89%E8%A3%85Jdk%E4%BB%A5%E5%8F%8A%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6/Idea.png"></li>
+<li>接下来就是很傻瓜式的操作了，大家直接按照自己的喜好按装即可。</li>
+</ol>
+<h3 id="idea简介"><a href="#idea简介" class="headerlink" title="idea简介"></a>idea简介</h3><p>一张图片给大家解释清楚idea界面<br><img src="/2024/02/14/%E5%AE%89%E8%A3%85Jdk%E4%BB%A5%E5%8F%8A%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6/IdeaPage.png"></p>
+<h2 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h2><p>上述就是JDK以及idea的详细安装过程了如果你有什么问题请在下方的评论区随时题问！</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>安装Jdk，idea</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java开发工具的安装与环境配置</title>
     <url>/2024/02/09/Jdk/</url>
     <content><![CDATA[<h1 id="认识JDK，JVM和JRE："><a href="#认识JDK，JVM和JRE：" class="headerlink" title="认识JDK，JVM和JRE："></a>认识JDK，JVM和JRE：</h1><h2 id="JDK（Java-Development-Kit）"><a href="#JDK（Java-Development-Kit）" class="headerlink" title="JDK（Java Development Kit）"></a>JDK（Java Development Kit）</h2><h3 id="一、简介："><a href="#一、简介：" class="headerlink" title="一、简介："></a>一、简介：</h3><h4 id="JDK（Java-Development-Kit，Java开发工具包）"><a href="#JDK（Java-Development-Kit，Java开发工具包）" class="headerlink" title="JDK（Java Development Kit，Java开发工具包）"></a><font color="red">JDK（Java Development Kit，Java开发工具包）</font></h4><p>JDK为Java应用程序提供了基本的开发和运行环境，是整个Java的核心，包括：</p>
@@ -99,23 +146,6 @@
         <tag>jdk</tag>
         <tag>jvm</tag>
         <tag>jre</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello world</title>
-    <url>/2024/02/07/hello-world/</url>
-    <content><![CDATA[<p>欢迎来到心念的Blog，很抱歉来的太晚了，但是如果你能在我这里有所收获，我想晚来一会儿也没有什么过错。好啦，陌生人，咱们该学习了，加油！</p>
-<h2 id="相对观众说的话："><a href="#相对观众说的话：" class="headerlink" title="相对观众说的话："></a>相对观众说的话：</h2><p>各位观众老爷：<br>    我作为一个双非本科的计算机学生来说，按照最近几年的就业形势我真的很难找到一个像样的工作，而且我来自于一个甘肃的小县城，本来网络技术这一方面就不是很发达，父母的观念也比较的保守，也不一定会让我去外面就业，所以了解了当前的行业情况之后，我挑选了一个自己热爱，而且门槛相对较低，又不是像python一样那种烂大街的语言————Java。并且开始了自己漫长的学习过程，今年，也就是2024年的春节期间，不习惯走亲戚的我最后下定决心，要在家干出一点属于自己的东西，下决心要在互联网上留下一点属于自己的东西，于是想起了多年之前给自己定下且没有完成的项目————搭建一个属于自己的博客网站，值得庆幸的的是在经过三天的努力和研究之后，我终于完成了网站的搭建和美化，并下定决心，要坚持将博客写下去。最后考虑在自己的blog网站写自己学习Java的一些心得和自己的经历，并会分享一些最近学习到的技术，如果你能在我这里学习到一些东西的话，可以收藏我的blog！ᵎ(•̀㉨•́)و ̑̑ 加油！！！</p>
-<h2 id="致谢："><a href="#致谢：" class="headerlink" title="致谢："></a>致谢：</h2><p>最后感谢下定决心要努力的自己！</p>
-<h2 id="tips："><a href="#tips：" class="headerlink" title="tips："></a>tips：</h2><p>最后感谢您的支持，这对我真的很重要！爱你么么哒！(ღ˘⌣˘ღ)</p>
-]]></content>
-      <categories>
-        <category>简介</category>
-      </categories>
-      <tags>
-        <tag>欢迎</tag>
-        <tag>简介</tag>
-        <tag>个人介绍</tag>
       </tags>
   </entry>
 </search>
