@@ -78,20 +78,27 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello world</title>
-    <url>/2024/02/07/hello-world/</url>
-    <content><![CDATA[<p>欢迎来到心念的Blog，很抱歉来的太晚了，但是如果你能在我这里有所收获，我想晚来一会儿也没有什么过错。好啦，陌生人，咱们该学习了，加油！</p>
-<h2 id="相对观众说的话："><a href="#相对观众说的话：" class="headerlink" title="相对观众说的话："></a>相对观众说的话：</h2><p>各位观众老爷：<br>    我作为一个双非本科的计算机学生来说，按照最近几年的就业形势我真的很难找到一个像样的工作，而且我来自于一个甘肃的小县城，本来网络技术这一方面就不是很发达，父母的观念也比较的保守，也不一定会让我去外面就业，所以了解了当前的行业情况之后，我挑选了一个自己热爱，而且门槛相对较低，又不是像python一样那种烂大街的语言————Java。并且开始了自己漫长的学习过程，今年，也就是2024年的春节期间，不习惯走亲戚的我最后下定决心，要在家干出一点属于自己的东西，下决心要在互联网上留下一点属于自己的东西，于是想起了多年之前给自己定下且没有完成的项目————搭建一个属于自己的博客网站，值得庆幸的的是在经过三天的努力和研究之后，我终于完成了网站的搭建和美化，并下定决心，要坚持将博客写下去。最后考虑在自己的blog网站写自己学习Java的一些心得和自己的经历，并会分享一些最近学习到的技术，如果你能在我这里学习到一些东西的话，可以收藏我的blog！ᵎ(•̀㉨•́)و ̑̑ 加油！！！</p>
-<h2 id="致谢："><a href="#致谢：" class="headerlink" title="致谢："></a>致谢：</h2><p>最后感谢下定决心要努力的自己！</p>
-<h2 id="tips："><a href="#tips：" class="headerlink" title="tips："></a>tips：</h2><p>最后感谢您的支持，这对我真的很重要！爱你么么哒！(ღ˘⌣˘ღ)</p>
+    <title>Java开发工具的安装与环境配置</title>
+    <url>/2024/02/09/Jdk/</url>
+    <content><![CDATA[<h1 id="认识JDK，JVM和JRE："><a href="#认识JDK，JVM和JRE：" class="headerlink" title="认识JDK，JVM和JRE："></a>认识JDK，JVM和JRE：</h1><h2 id="JDK（Java-Development-Kit）"><a href="#JDK（Java-Development-Kit）" class="headerlink" title="JDK（Java Development Kit）"></a>JDK（Java Development Kit）</h2><h3 id="一、简介："><a href="#一、简介：" class="headerlink" title="一、简介："></a>一、简介：</h3><h4 id="JDK（Java-Development-Kit，Java开发工具包）"><a href="#JDK（Java-Development-Kit，Java开发工具包）" class="headerlink" title="JDK（Java Development Kit，Java开发工具包）"></a><font color="red">JDK（Java Development Kit，Java开发工具包）</font></h4><p>JDK为Java应用程序提供了基本的开发和运行环境，是整个Java的核心，包括：</p>
+<ol>
+<li>Java运行环境（JRE）</li>
+<li>JDK类库，如：java.lang、java.io、java.awt、java.swing等类</li>
+<li>Java开发工具，如：javac.exe（编译工具）、java.exe（运行工具）、javadoc.exe（生成JavaDoc文档的工具）和jar.exe（打包工具）等</li>
+</ol>
+<p>Java安装包中的对应关系（如图所示）:<br><img src="/2024/02/09/Jdk/folder.png" alt="安装包位置"></p>
+<h4 id="JRE（Java-Runtime-Environment，Java运行环境）"><a href="#JRE（Java-Runtime-Environment，Java运行环境）" class="headerlink" title="JRE（Java Runtime Environment，Java运行环境）"></a><font color="red">JRE（Java Runtime Environment，Java运行环境）</font></h4><p>JRE是Java程序的运行环境，包含：JVM和Java核心类库</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">当下发一个Java程序时，想要在一个全新的环境下运行一个Java程序只需要安装JRE就可以</span><br></pre></td></tr></table></figure>
+
+<h4 id="JVM（Java-Virtual-Machine，Java虚拟机）"><a href="#JVM（Java-Virtual-Machine，Java虚拟机）" class="headerlink" title="JVM（Java Virtual Machine，Java虚拟机）"></a><font color="red">JVM（Java Virtual Machine，Java虚拟机）</font></h4><p>JVM即Java虚拟机，是整个Java实现跨平台的最核心的部分，是编译后的Java程序（.class文件）和硬件系统的接口，不仅解释执行编译后的Java指令，而且还进行安全检查</p>
+<h4 id="三者关系："><a href="#三者关系：" class="headerlink" title="三者关系："></a>三者关系：</h4><p>JDK &#x3D; JRE + 其他<br>JRE &#x3D; JVM + 其他</p>
+<h3 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h3><p>以下是JDK，JRE和JVM三者的关系图<br><img src="/2024/02/09/Jdk/relationship.png" alt="关系图"></p>
+<p>以上就是上述三者的关系概述！还请指正！</p>
 ]]></content>
-      <categories>
-        <category>简介</category>
-      </categories>
       <tags>
-        <tag>欢迎</tag>
-        <tag>简介</tag>
-        <tag>个人介绍</tag>
+        <tag>jdk</tag>
+        <tag>jvm</tag>
+        <tag>jre</tag>
       </tags>
   </entry>
   <entry>
@@ -125,27 +132,20 @@
       </tags>
   </entry>
   <entry>
-    <title>Java开发工具的安装与环境配置</title>
-    <url>/2024/02/09/Jdk/</url>
-    <content><![CDATA[<h1 id="认识JDK，JVM和JRE："><a href="#认识JDK，JVM和JRE：" class="headerlink" title="认识JDK，JVM和JRE："></a>认识JDK，JVM和JRE：</h1><h2 id="JDK（Java-Development-Kit）"><a href="#JDK（Java-Development-Kit）" class="headerlink" title="JDK（Java Development Kit）"></a>JDK（Java Development Kit）</h2><h3 id="一、简介："><a href="#一、简介：" class="headerlink" title="一、简介："></a>一、简介：</h3><h4 id="JDK（Java-Development-Kit，Java开发工具包）"><a href="#JDK（Java-Development-Kit，Java开发工具包）" class="headerlink" title="JDK（Java Development Kit，Java开发工具包）"></a><font color="red">JDK（Java Development Kit，Java开发工具包）</font></h4><p>JDK为Java应用程序提供了基本的开发和运行环境，是整个Java的核心，包括：</p>
-<ol>
-<li>Java运行环境（JRE）</li>
-<li>JDK类库，如：java.lang、java.io、java.awt、java.swing等类</li>
-<li>Java开发工具，如：javac.exe（编译工具）、java.exe（运行工具）、javadoc.exe（生成JavaDoc文档的工具）和jar.exe（打包工具）等</li>
-</ol>
-<p>Java安装包中的对应关系（如图所示）:<br><img src="/2024/02/09/Jdk/folder.png" alt="安装包位置"></p>
-<h4 id="JRE（Java-Runtime-Environment，Java运行环境）"><a href="#JRE（Java-Runtime-Environment，Java运行环境）" class="headerlink" title="JRE（Java Runtime Environment，Java运行环境）"></a><font color="red">JRE（Java Runtime Environment，Java运行环境）</font></h4><p>JRE是Java程序的运行环境，包含：JVM和Java核心类库</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">当下发一个Java程序时，想要在一个全新的环境下运行一个Java程序只需要安装JRE就可以</span><br></pre></td></tr></table></figure>
-
-<h4 id="JVM（Java-Virtual-Machine，Java虚拟机）"><a href="#JVM（Java-Virtual-Machine，Java虚拟机）" class="headerlink" title="JVM（Java Virtual Machine，Java虚拟机）"></a><font color="red">JVM（Java Virtual Machine，Java虚拟机）</font></h4><p>JVM即Java虚拟机，是整个Java实现跨平台的最核心的部分，是编译后的Java程序（.class文件）和硬件系统的接口，不仅解释执行编译后的Java指令，而且还进行安全检查</p>
-<h4 id="三者关系："><a href="#三者关系：" class="headerlink" title="三者关系："></a>三者关系：</h4><p>JDK &#x3D; JRE + 其他<br>JRE &#x3D; JVM + 其他</p>
-<h3 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h3><p>以下是JDK，JRE和JVM三者的关系图<br><img src="/2024/02/09/Jdk/relationship.png" alt="关系图"></p>
-<p>以上就是上述三者的关系概述！还请指正！</p>
+    <title>Hello world</title>
+    <url>/2024/02/07/hello-world/</url>
+    <content><![CDATA[<p>欢迎来到心念的Blog，很抱歉来的太晚了，但是如果你能在我这里有所收获，我想晚来一会儿也没有什么过错。好啦，陌生人，咱们该学习了，加油！</p>
+<h2 id="相对观众说的话："><a href="#相对观众说的话：" class="headerlink" title="相对观众说的话："></a>相对观众说的话：</h2><p>各位观众老爷：<br>    我作为一个双非本科的计算机学生来说，按照最近几年的就业形势我真的很难找到一个像样的工作，而且我来自于一个甘肃的小县城，本来网络技术这一方面就不是很发达，父母的观念也比较的保守，也不一定会让我去外面就业，所以了解了当前的行业情况之后，我挑选了一个自己热爱，而且门槛相对较低，又不是像python一样那种烂大街的语言————Java。并且开始了自己漫长的学习过程，今年，也就是2024年的春节期间，不习惯走亲戚的我最后下定决心，要在家干出一点属于自己的东西，下决心要在互联网上留下一点属于自己的东西，于是想起了多年之前给自己定下且没有完成的项目————搭建一个属于自己的博客网站，值得庆幸的的是在经过三天的努力和研究之后，我终于完成了网站的搭建和美化，并下定决心，要坚持将博客写下去。最后考虑在自己的blog网站写自己学习Java的一些心得和自己的经历，并会分享一些最近学习到的技术，如果你能在我这里学习到一些东西的话，可以收藏我的blog！ᵎ(•̀㉨•́)و ̑̑ 加油！！！</p>
+<h2 id="致谢："><a href="#致谢：" class="headerlink" title="致谢："></a>致谢：</h2><p>最后感谢下定决心要努力的自己！</p>
+<h2 id="tips："><a href="#tips：" class="headerlink" title="tips："></a>tips：</h2><p>最后感谢您的支持，这对我真的很重要！爱你么么哒！(ღ˘⌣˘ღ)</p>
 ]]></content>
+      <categories>
+        <category>简介</category>
+      </categories>
       <tags>
-        <tag>jdk</tag>
-        <tag>jvm</tag>
-        <tag>jre</tag>
+        <tag>欢迎</tag>
+        <tag>简介</tag>
+        <tag>个人介绍</tag>
       </tags>
   </entry>
 </search>
