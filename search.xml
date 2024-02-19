@@ -132,6 +132,336 @@
       </tags>
   </entry>
   <entry>
+    <title>Java基础语法</title>
+    <url>/2024/02/19/Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="Java-基础语法"><a href="#Java-基础语法" class="headerlink" title="Java 基础语法"></a>Java 基础语法</h1><p>一个 Java 程序可以认为是一系列对象的集合，而这些对象通过调用彼此的方法来协同工作。下面简要介绍下类、对象、方法和实例变量的概念。</p>
+<h3 id="对象："><a href="#对象：" class="headerlink" title="对象："></a>对象：</h3><p>对象是类的一个实例，有状态和行为。例如，一条狗是一个对象，它的状态有：颜色、名字、品种；行为有：摇尾巴、叫、吃等。</p>
+<h3 id="类："><a href="#类：" class="headerlink" title="类："></a>类：</h3><p>类是一个模板，它描述一类对象的行为和状态。</p>
+<h3 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h3><p>方法就是行为，一个类可以有很多方法。逻辑运算、数据修改以及所有动作都是在方法中完成的。</p>
+<h3 id="实例变量："><a href="#实例变量：" class="headerlink" title="实例变量："></a>实例变量：</h3><p>每个对象都有独特的实例变量，对象的状态由这些实例变量的值决定。<br>第一个Java程序<br>下面看一个简单的 Java 程序，它将输出字符串 Hello World</p>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class HelloWorld &#123;</span><br><span class="line">    /* 第一个Java程序</span><br><span class="line">     * 它将输出字符串 Hello World</span><br><span class="line">     */</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        System.out.println(&quot;Hello World&quot;); // 输出 Hello World</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行实例 »<br><img src="/2024/02/19/Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/662E827A-FA32-4464-B0BD-40087F429E98.jpg"></p>
+<p>下面将逐步介绍如何保存、编译以及运行这个程序：</p>
+<pre><code>打开代码编辑器，把上面的代码添加进去；
+把文件名保存为：HelloWorld.java；
+打开 cmd 命令窗口，进入目标文件所在的位置，假设是 C:\
+在命令行窗口输入 javac HelloWorld.java 按下回车键编译代码。如果代码没有错误，cmd 命令提示符会进入下一行（假设环境变量都设置好了）。
+再键输入 java HelloWorld 按下回车键就可以运行程序了
+你将会在窗口看到 Hello World
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ javac HelloWorld.java</span><br><span class="line">$ java HelloWorld </span><br><span class="line">Hello World</span><br></pre></td></tr></table></figure>
+<p>如果遇到编码问题，我们可以使用 -encoding 选项设置 utf-8 来编译：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">javac -encoding UTF-8 HelloWorld.java </span><br><span class="line">java HelloWorld </span><br></pre></td></tr></table></figure>
+<p>Gif 图演示：<br><img src="/2024/02/19/Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/java-HelloWorld.gif"></p>
+<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><p>编写 Java 程序时，应注意以下几点：</p>
+<h3 id="大小写敏感："><a href="#大小写敏感：" class="headerlink" title="大小写敏感："></a>大小写敏感：</h3><p>Java 是大小写敏感的，这就意味着标识符 Hello 与 hello 是不同的。</p>
+<h3 id="类名："><a href="#类名：" class="headerlink" title="类名："></a>类名：</h3><p>对于所有的类来说，类名的首字母应该大写。如果类名由若干单词组成，那么每个单词的首字母应该大写，例如 MyFirstJavaClass 。</p>
+<h3 id="方法名："><a href="#方法名：" class="headerlink" title="方法名："></a>方法名：</h3><p>所有的方法名都应该以小写字母开头。如果方法名含有若干单词，则后面的每个单词首字母大写。</p>
+<h3 id="源文件名："><a href="#源文件名：" class="headerlink" title="源文件名："></a>源文件名：</h3><p>源文件名必须和类名相同。当保存文件的时候，你应该使用类名作为文件名保存（切记 Java 是大小写敏感的），文件名的后缀为 .java。（如果文件名和类名不相同则会导致编译错误）。</p>
+<h3 id="主方法入口："><a href="#主方法入口：" class="headerlink" title="主方法入口："></a>主方法入口：</h3><p>所有的 Java 程序由 public static void main(String[] args) 方法开始执行。</p>
+<h3 id="Java-标识符"><a href="#Java-标识符" class="headerlink" title="Java 标识符"></a>Java 标识符</h3><p>Java 所有的组成部分都需要名字。类名、变量名以及方法名都被称为标识符。</p>
+<p>关于 Java 标识符，有以下几点需要注意：</p>
+<blockquote>
+<p>所有的标识符都应该以字母（A-Z 或者 a-z）,美元符（$）、或者下划线（ _ ）开始<br>首字符之后可以是字母（A-Z 或者 a-z),美元符（$）、下划线（_）或数字的任何字符组合</p>
+</blockquote>
+<p>关键字不能用作标识符<br>标识符是大小写敏感的<br><strong>合法标识符举例</strong>：age、$salary、_value、__1_value<br><strong>非法标识符举例</strong>：123abc、-salary</p>
+<h3 id="Java修饰符"><a href="#Java修饰符" class="headerlink" title="Java修饰符"></a>Java修饰符</h3><p>像其他语言一样，Java可以使用修饰符来修饰类中方法和属性。主要有两类修饰符：</p>
+<ol>
+<li>访问控制修饰符 : default, public , protected, private</li>
+<li>非访问控制修饰符 : final, abstract, static, synchronized<br>在后面的章节中我们会深入讨论 Java 修饰符。</li>
+</ol>
+<h3 id="Java-变量"><a href="#Java-变量" class="headerlink" title="Java 变量"></a>Java 变量</h3><p>Java 中主要有如下几种类型的变量</p>
+<ol>
+<li>局部变量</li>
+<li>类变量（静态变量）</li>
+<li>成员变量（非静态变量）</li>
+</ol>
+<h3 id="Java-数组"><a href="#Java-数组" class="headerlink" title="Java 数组"></a>Java 数组</h3><p>数组是储存在堆上的对象，可以保存多个同类型变量。在后面的章节中，我们将会学到如何声明、构造以及初始化一个数组。</p>
+<h3 id="Java-枚举"><a href="#Java-枚举" class="headerlink" title="Java 枚举"></a>Java 枚举</h3><p>Java 5.0引入了枚举，枚举限制变量只能是预先设定好的值。使用枚举可以减少代码中的 bug。</p>
+<p>例如，我们为果汁店设计一个程序，它将限制果汁为小杯、中杯、大杯。这就意味着它不允许顾客点除了这三种尺寸外的果汁。</p>
+<p>实例</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class FreshJuice &#123;</span><br><span class="line">    enum FreshJuiceSize&#123; SMALL, MEDIUM , LARGE &#125;</span><br><span class="line">    FreshJuiceSize size;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public class FreshJuiceTest &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        FreshJuice juice = new FreshJuice();</span><br><span class="line">        juice.size = FreshJuice.FreshJuiceSize.MEDIUM  ;</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>注意：枚举可以单独声明或者声明在类里面。方法、变量、构造函数也可以在枚举中定义。</p>
+<h3 id="Java-关键字"><a href="#Java-关键字" class="headerlink" title="Java 关键字"></a>Java 关键字</h3><p>下面列出了 Java 关键字。这些保留字不能用于常量、变量、和任何标识符的名称。</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>关键字</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>访问控制</td>
+<td>private</td>
+<td>私有的</td>
+</tr>
+<tr>
+<td>public</td>
+<td>公共的</td>
+<td></td>
+</tr>
+<tr>
+<td>default</td>
+<td>默认</td>
+<td></td>
+</tr>
+<tr>
+<td>类、方法和变量修饰符</td>
+<td>abstract</td>
+<td>声明抽象</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>受保护的</td>
+<td></td>
+</tr>
+<tr>
+<td>class</td>
+<td>类</td>
+<td></td>
+</tr>
+<tr>
+<td>extends</td>
+<td>扩充、继承</td>
+<td></td>
+</tr>
+<tr>
+<td>final</td>
+<td>最终值、不可改变的</td>
+<td></td>
+</tr>
+<tr>
+<td>implements</td>
+<td>实现（接口）</td>
+<td></td>
+</tr>
+<tr>
+<td>interface</td>
+<td>接口</td>
+<td></td>
+</tr>
+<tr>
+<td>native</td>
+<td>本地、原生方法（非 Java 实现）</td>
+<td></td>
+</tr>
+<tr>
+<td>new</td>
+<td>创建</td>
+<td></td>
+</tr>
+<tr>
+<td>static</td>
+<td>静态</td>
+<td></td>
+</tr>
+<tr>
+<td>strictfp</td>
+<td>严格浮点、精准浮点</td>
+<td></td>
+</tr>
+<tr>
+<td>synchronized</td>
+<td>线程、同步</td>
+<td></td>
+</tr>
+<tr>
+<td>transient</td>
+<td>短暂</td>
+<td></td>
+</tr>
+<tr>
+<td>volatile</td>
+<td>易失</td>
+<td></td>
+</tr>
+<tr>
+<td>程序控制语句</td>
+<td>break</td>
+<td>跳出循环</td>
+</tr>
+<tr>
+<td>case</td>
+<td>定义一个值以供 switch 选择</td>
+<td></td>
+</tr>
+<tr>
+<td>continue</td>
+<td>继续</td>
+<td></td>
+</tr>
+<tr>
+<td>do</td>
+<td>运行</td>
+<td></td>
+</tr>
+<tr>
+<td>else</td>
+<td>否则</td>
+<td></td>
+</tr>
+<tr>
+<td>for</td>
+<td>循环</td>
+<td></td>
+</tr>
+<tr>
+<td>if</td>
+<td>如果</td>
+<td></td>
+</tr>
+<tr>
+<td>instanceof</td>
+<td>实例</td>
+<td></td>
+</tr>
+<tr>
+<td>return</td>
+<td>返回</td>
+<td></td>
+</tr>
+<tr>
+<td>switch</td>
+<td>根据值选择执行</td>
+<td></td>
+</tr>
+<tr>
+<td>while</td>
+<td>循环</td>
+<td></td>
+</tr>
+<tr>
+<td>错误处理</td>
+<td>assert</td>
+<td>断言表达式是否为真</td>
+</tr>
+<tr>
+<td>catch</td>
+<td>捕捉异常</td>
+<td></td>
+</tr>
+<tr>
+<td>finally</td>
+<td>有没有异常都执行</td>
+<td></td>
+</tr>
+<tr>
+<td>throw</td>
+<td>抛出一个异常对象</td>
+<td></td>
+</tr>
+<tr>
+<td>throws</td>
+<td>声明一个异常可能被抛出</td>
+<td></td>
+</tr>
+<tr>
+<td>try</td>
+<td>捕获异常</td>
+<td></td>
+</tr>
+<tr>
+<td>包相关</td>
+<td>import</td>
+<td>引入</td>
+</tr>
+<tr>
+<td>package</td>
+<td>包</td>
+<td></td>
+</tr>
+<tr>
+<td>基本类型</td>
+<td>boolean</td>
+<td>布尔型</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>字节型</td>
+<td></td>
+</tr>
+<tr>
+<td>char</td>
+<td>字符型</td>
+<td></td>
+</tr>
+<tr>
+<td>double</td>
+<td>双精度浮点</td>
+<td></td>
+</tr>
+<tr>
+<td>float</td>
+<td>单精度浮点</td>
+<td></td>
+</tr>
+<tr>
+<td>int</td>
+<td>整型</td>
+<td></td>
+</tr>
+<tr>
+<td>long</td>
+<td>长整型</td>
+<td></td>
+</tr>
+<tr>
+<td>short</td>
+<td>短整型</td>
+<td></td>
+</tr>
+<tr>
+<td>变量引用</td>
+<td>super</td>
+<td>父类、超类</td>
+</tr>
+<tr>
+<td>this</td>
+<td>本类</td>
+<td></td>
+</tr>
+<tr>
+<td>void</td>
+<td>无返回值</td>
+<td></td>
+</tr>
+<tr>
+<td>保留关键字</td>
+<td>goto</td>
+<td>是关键字，但不能使用</td>
+</tr>
+<tr>
+<td>const</td>
+<td></td>
+<td>是关键字，但不能使用</td>
+</tr>
+</tbody></table>
+<p>注意：Java 的 null 不是关键字，类似于 true 和 false，它是一个字面常量，不允许作为标识符使用。</p>
+<h3 id="Java注释"><a href="#Java注释" class="headerlink" title="Java注释"></a>Java注释</h3><p>类似于 C&#x2F;C++、Java 也支持单行以及多行注释。</p>
+<p>注释中的字符将被 Java 编译器忽略。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class HelloWorld &#123;</span><br><span class="line">   /* 这是第一个Java程序</span><br><span class="line">    * 它将输出 Hello World</span><br><span class="line">    * 这是一个多行注释的示例</span><br><span class="line">    */</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">       // 这是单行注释的示例</span><br><span class="line">       /* 这个也是单行注释的示例 */</span><br><span class="line">       System.out.println(&quot;Hello World&quot;); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>更多内容可以参考：Java 注释。</p>
+<h3 id="Java-空行"><a href="#Java-空行" class="headerlink" title="Java 空行"></a>Java 空行</h3><p>空白行或者有注释的行，Java 编译器都会忽略掉。</p>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>在 Java 中，一个类可以由其他类派生。如果你要创建一个类，而且已经存在一个类具有你所需要的属性或方法，那么你可以将新创建的类继承该类。</p>
+<p>利用继承的方法，可以重用已存在类的方法和属性，而不用重写这些代码。被继承的类称为超类（super class），派生类称为子类（sub class）。</p>
+<h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><p>在 Java 中，接口可理解为对象间相互通信的协议。接口在继承中扮演着很重要的角色。</p>
+<p>接口只定义派生要用到的方法，但是方法的具体实现完全取决于派生类。</p>
+<p>Java 源程序与编译型运行区别<br>如下图所示：<br><img src="/2024/02/19/Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/javaProgram.png"></p>
+<p>下一节介绍 Java 编程中的类和对象。之后你将会对 Java 中的类和对象有更清楚的认识。</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>字符串</tag>
+        <tag>数据结构</tag>
+        <tag>变量</tag>
+        <tag>关键字</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello world</title>
     <url>/2024/02/07/hello-world/</url>
     <content><![CDATA[<p>欢迎来到心念的Blog，很抱歉来的太晚了，但是如果你能在我这里有所收获，我想晚来一会儿也没有什么过错。好啦，陌生人，咱们该学习了，加油！</p>
